@@ -14,9 +14,10 @@ import AppKit
 
 final class MetalViewController: APPLViewController {
 
+    let valuesPerVertex: Int = 8 // 4 position + 4 color values
     let vertexData: [Float] = [
         // Position[4]          Color[4]
-        -0.5, -0.5, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, // left  - red
+        -0.5, -0.5, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, // left  - red
         +0.0, +0.5, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, // top   - green
         +0.5, -0.5, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0  // right - blue
     ]
@@ -39,6 +40,8 @@ final class MetalViewController: APPLViewController {
         guard let mtlDevice: MTLDevice = MTLCreateSystemDefaultDevice() else {
             fatalError("No Metal device")
         }
+
+        // Blue Green Red Alpha; UInt8 0-255
 
         mtlView.mtlLayer.device = mtlDevice
         mtlView.mtlLayer.pixelFormat = .bgra8Unorm
@@ -81,7 +84,7 @@ final class MetalViewController: APPLViewController {
 
     private func makePassDescriptor(_ drawable: CAMetalDrawable) -> MTLRenderPassDescriptor {
         let desc = MTLRenderPassDescriptor()
-        desc.colorAttachments[0].clearColor = MTLClearColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        desc.colorAttachments[0].clearColor = MTLClearColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1)
         desc.colorAttachments[0].loadAction = .clear
         desc.colorAttachments[0].storeAction = .store
         desc.colorAttachments[0].texture = drawable.texture
@@ -113,7 +116,7 @@ final class MetalViewController: APPLViewController {
 
         encoder.drawPrimitives(type: .triangle,
                                vertexStart: 0,
-                               vertexCount: vertexData.count - 1)
+                               vertexCount: vertexData.count / valuesPerVertex)
 
         encoder.endEncoding()
 
