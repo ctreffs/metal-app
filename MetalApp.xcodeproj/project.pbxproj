@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		F813E4DF260B1FFF00CD821B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F813E4E1260B209C00CD821B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F813E4E3260B415200CD821B /* MetalApp_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalApp_iOS.entitlements; sourceTree = "<group>"; };
 		F870BCCD25E8386C003D7BFC /* MetalApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F870BCD825E8386D003D7BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F870BCDB25E8386D003D7BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,10 +87,11 @@
 		F870BCCE25E8386C003D7BFC /* MetalApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F870BCD825E8386D003D7BFC /* Assets.xcassets */,
-				F870BCDA25E8386D003D7BFC /* LaunchScreen.storyboard */,
+				F813E4E3260B415200CD821B /* MetalApp_iOS.entitlements */,
 				F870BCDD25E8386D003D7BFC /* Info.plist */,
 				F813E4DF260B1FFF00CD821B /* main.swift */,
+				F870BCD825E8386D003D7BFC /* Assets.xcassets */,
+				F870BCDA25E8386D003D7BFC /* LaunchScreen.storyboard */,
 			);
 			name = MetalApp_iOS;
 			path = Sources/MetalApp_iOS;
@@ -399,6 +401,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Sources/MetalApp_iOS/MetalApp_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DB83U4GTFV;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -423,9 +426,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.ctreffs.MetalApp-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -463,6 +468,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Sources/MetalApp_iOS/MetalApp_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = DB83U4GTFV;
@@ -483,8 +489,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.ctreffs.MetalApp-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
