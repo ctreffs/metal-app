@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F813E4E0260B1FFF00CD821B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813E4DF260B1FFF00CD821B /* main.swift */; };
+		F813E4E2260B209C00CD821B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813E4E1260B209C00CD821B /* main.swift */; };
 		F870BCD925E8386D003D7BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F870BCD825E8386D003D7BFC /* Assets.xcassets */; };
 		F870BCDC25E8386D003D7BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F870BCDA25E8386D003D7BFC /* LaunchScreen.storyboard */; };
 		F870BCF325E839DE003D7BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F813E4DF260B1FFF00CD821B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F813E4E1260B209C00CD821B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F870BCCD25E8386C003D7BFC /* MetalApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F870BCD825E8386D003D7BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F870BCDB25E8386D003D7BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				F870BCD825E8386D003D7BFC /* Assets.xcassets */,
 				F870BCDA25E8386D003D7BFC /* LaunchScreen.storyboard */,
 				F870BCDD25E8386D003D7BFC /* Info.plist */,
+				F813E4DF260B1FFF00CD821B /* main.swift */,
 			);
 			name = MetalApp_iOS;
 			path = Sources/MetalApp_iOS;
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F8FEC36C25E83EFD0055D321 /* Assets.xcassets */,
+				F813E4E1260B209C00CD821B /* main.swift */,
 				F8FEC36E25E83EFD0055D321 /* LaunchScreen.storyboard */,
 				F8FEC37125E83EFD0055D321 /* Info.plist */,
 			);
@@ -229,7 +235,7 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 9999;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					F870BCCC25E8386C003D7BFC = {
 						CreatedOnToolsVersion = 12.4;
@@ -303,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F870BCF825E839E6003D7BFC /* Shader.metal in Sources */,
+				F813E4E0260B1FFF00CD821B /* main.swift in Sources */,
 				F870BCF725E839E6003D7BFC /* MetalView.swift in Sources */,
 				F870BCF925E839E6003D7BFC /* MetalViewController.swift in Sources */,
 				F870BCFA25E839E6003D7BFC /* Shims.swift in Sources */,
@@ -316,6 +323,7 @@
 			files = (
 				F8FEC37E25E83F9F0055D321 /* AppDelegate.swift in Sources */,
 				F8FEC37D25E83F9F0055D321 /* Shader.metal in Sources */,
+				F813E4E2260B209C00CD821B /* main.swift in Sources */,
 				F8FEC37F25E83F9F0055D321 /* MetalView.swift in Sources */,
 				F8FEC37C25E83F9F0055D321 /* Shims.swift in Sources */,
 				F8FEC37B25E83F9F0055D321 /* MetalViewController.swift in Sources */,
@@ -640,6 +648,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = Sources/MetalApp_macOS/MetalApp_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DB83U4GTFV;
@@ -705,6 +714,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = Sources/MetalApp_macOS/MetalApp_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -734,17 +744,44 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
@@ -762,15 +799,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
